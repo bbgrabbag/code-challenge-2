@@ -1,7 +1,7 @@
 const { unionOverlappingItems, union, areJoinable } = require("./main");
 const { testCases } = require("./test-cases");
 
-describe('union function', () => {
+describe("union function", () => {
   testCases.union.forEach(([input, expected]) => {
     it("Should output an overlapped item", () => {
       expect(union(...input)).toEqual(expected);
@@ -9,7 +9,7 @@ describe('union function', () => {
   });
 });
 
-describe('areJoinable function', () => {
+describe("areJoinable function", () => {
   testCases.areJoinable.forEach(([input, expected]) => {
     it("Should determine whether two items are joinable", () => {
       expect(areJoinable(...input)).toBe(expected);
@@ -24,4 +24,3 @@ describe("unionOverlappingItems Function", () => {
     });
   });
 });
-
