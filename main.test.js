@@ -1,4 +1,4 @@
-const { unionOverlappingItems, union, areJoinable } = require("./main");
+const { unionOverlappingItemsOptimized, unionOverlappingItems, union, areJoinable } = require("./main");
 const { testCases } = require("./test-cases");
 
 describe("union function", () => {
@@ -21,6 +21,13 @@ describe("unionOverlappingItems Function", () => {
   testCases.unionOverlappingItems.forEach(([input, expected]) => {
     it("Should output an array of non-overlapping items", () => {
       expect(unionOverlappingItems(input)).toEqual(expected);
+    });
+  });
+});
+describe("unionOverlappingItemsOptimized Function", () => {
+  testCases.unionOverlappingItems.forEach(([input, expected]) => {
+    it("Should output an array of non-overlapping items", () => {
+      expect(unionOverlappingItemsOptimized(input)).toEqual(expected);
     });
   });
 });
